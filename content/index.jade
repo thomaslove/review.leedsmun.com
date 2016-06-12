@@ -1,0 +1,129 @@
+---
+title: Year in Review | Leeds Model United Nations
+layout: home.jade
+---
+
+- function commaSeparateNumber(val){
+-		while (/(\d+)(\d{3})/.test(val.toString())){
+-			val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+-		}
+-		return val;
+-	}
+
+mixin article(count, title, description)
+	article.row(data-count=count)
+		.col-md-5.col-md-push-1.left
+			span.number= commaSeparateNumber(count)
+		.col-md-5.col-md-push-1.right
+			p= title
+			p= description
+
+div.statistics
+	span#scrollTop scrollTop: unknown
+	span#active active: unknown
+	span#percentage percentage: unknown
+	span#count count: unknown
+
+div#counter.noselect.hidden 0
+
+.container-fluid#data
+	section(data-count="0" data-section="header").row.header
+		.header-wrapper
+			.col-md-5.col-md-push-1.header-title
+					img(src="/assets/img/countup.svg")
+			.col-md-5.col-md-push-1.header-text
+				.vertical
+					img(src="/assets/img/logo.png").logo.hidden-sm-down
+					p.hidden-md-up Leeds Model United Nations 2015
+					p Here’s a look at the the last year of the society through the numbers that made it
+		.subtitle
+			span keep those fingers scrolling
+
+
+	+article('1', 'International Conference', 'This year was our 3rd conference and we had more delegates and committees than ever before')
+
+	+article('2', '‘Give it a go’ sessions', 'We changed the format of the GIAG sessions this year to make it easier for beginners to get used to our unique style of debating')
+
+	+article('4', 'Members graduated from the chair training program', 'By opening up chairing to members we can ensure the society always has high quality chairs to lead weekly sessions and represent us at external conferences')
+
+	+article('5', 'Committees at this year’s conference', 'Incredible demand meant we were, for the first time, able to add a fifth committee (ITU) to our conference')
+
+	+article('6', 'Resolutions were passed during the conference', 'We had some great debates during the weekend and our committees were able to produce six brilliant resolutions')
+
+	+article('7', 'External conferences attended by Leeds delegates', 'We’ve been able to send delegates away to represent Leeds at more external conferences than ever before')
+
+	+article('11', 'Awards won by Leeds delegates at external conferences', 'And they’ve done an awful lot of winning as well, including awards for best small delegation at Nottingham and Manchester')
+	
+	+article('13', 'Chairs and directors at this year’s conference', 'More committees mean more staff and we pulled in the best from around the country to help us')
+	
+	+article('14', 'Chairs sent to other conferences','And it wasn’t just the committee, many more members have been responsible for chairing at external conferences this year too')
+
+	+article('20', 'Topics were discussed in weekly sessions', 'From the Iranian Nuclear Crisis to Security Council reform, we covered a wide range of topics this year in our weekly meetings')
+
+	+article('22', 'Delegates sent to external conferences', 'Our delegates have been doing us proud representing Leeds up and down the country')
+
+	+article('23', 'Meetings held by committee', 'We’re always busy planning new and exciting initiatives for the society')
+
+	+article('24', 'First time delegates at our conference', 'Our ethos is that MUN should be accessible to everyone so we’re very proud that so many people chose us as their first conference')
+
+	+article('26', 'Nationalities present at this year’s conference', 'We were also able to partner with the LUU World Unite festival which seeks to celebrate cultures from around the world')
+
+	+article('41', 'School children attended a conference we ran at Beckfoot School', 'And we’ve got plans to extend our MUN into schools program even further next year in collaboration with the Societies into Schools initiative')
+
+	+article('56', 'Members joined the society this year', 'More than ever before!')
+
+	+article('61', 'Pounds was raised for charity at the conference this year', 'STAR will use the money to provide six weeks of taxis for volunteers to work with refugees and economic migrants to learn English and support themselves and their families in the UK. More support for volunteers means their numbers stay high and learners get better support')
+
+	+article('70', 'Social packs sold for the conference', 'Delegates had a great time at two amazing socials, where we showcased the best that Leeds has to offer')
+
+	+article('72', 'Files were shared in committees during the conference', 'All our delegates were busy creating working papers, draft resolutions, and more, to try and solve the problems their chairs had set')
+	
+	+article('74', 'Delegates attended the conference', 'A record number and an impressive achievement for our 3rd conference')
+
+	+article('78', 'GIAG attendees', 'The new session format proved very popular and we were exited to see so many new faces getting involved')
+
+	+article('90', 'Percent would come back to the conference next year', 'Feedback from the conference was excellent and we hope as many delegates as possible return next year')
+
+	+article('91', 'Attendees in total for this year’s conference', 'We were able to showcase the best that the society and the university has to offer to almost 100 people')
+
+	+article('119', 'Country reservations for weekly sessions','We’ve always given you the ability to reserve your countries in advance but we’re impressed at just how many of you did so this year')
+
+	+article('143', 'Cards were created by the committee on Trello', 'Strong organization game from the committee')
+
+	+article('230', 'Pounds spent in conference subsidies', 'More money than ever before going towards helping our members get to as many conferences as possible')
+
+	+article('270', 'Agenda items marked as completed by the committee', 'Who says nothing gets done in meetings')
+
+	+article('353', 'Email addresses collected during freshers fair', 'Czech us out!')
+
+	+article('419', 'Followers on Twitter', '#winning')
+
+	+article('443', 'Mentions of ‘Cecily’ in the committee group chat', 'The highest number of mentions of any committee member, outreach is an important role!')
+
+	+article('490', 'Mentions of ‘conference’ in the committee group chat', 'Information on how many cups of coffee were drunk by the committee during this time is still unknown')
+
+	+article('549', 'Emails sent by the committee', 'That doesn’t include newsletters...')
+
+	+article('650', 'Likes on Facebook', '👍')
+
+	+article('660', 'Subscribers on our mailing list', 'New members, old members, people at other societies, my mother...')
+
+	+article('783', 'Files shared between committee members', 'Between Dropbox and Slack, we’ve sure generated a lot of files as a committee this year')
+
+	+article('2573', 'Emojis sent by committee members on Slack', 'Many 😂 and 😍, and lots of 👍')
+
+	+article('3051', 'Messages sent by DISEC and ITU during conference','Both committees used our very own Decorum website for chatting in committee')
+
+	+article('3524', 'Pounds in revenue processed through our online Union shop', 'Watch out Amazon.com')
+
+	+article('4697', 'Emails sent to the mailing list', 'Totally not spam')
+	
+	+article('11597', 'Page views on the new website', 'We rebranded the society this year, including a shiny new website. We’re thrilled to see it getting such use')
+	
+	+article('22500', 'Messages sent between committee members', 'The entire committee are massive Slack fans now')
+
+	section.row.footer(data-count="22501" data-section="footer")
+		.col-xs-12
+			p We did it guys 
+				span.party.hidden 🎉
+			p Thanks for an amazing year
